@@ -1,0 +1,17 @@
+.fa {
+    /* padding: 20px; */
+    padding-top:3px;
+    font-size: 1.5rem !important;
+    /* width: 50px; */
+    text-align: center;
+    text-decoration: none;
+  }
+
+.fa-instagram{
+    color:var(--almost-black) !important;
+}
+
+.fa-facebook{
+  color:var(--almost-black) !important;
+}
+

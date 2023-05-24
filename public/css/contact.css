@@ -1,0 +1,257 @@
+.contact-form{
+    background: rgb(155,235,255);
+    background: linear-gradient(183deg, rgba(155,235,255,1) 0%, rgba(247,173,173,1) 100%);
+    width:100%;
+    height:calc(100vh - 68px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:-.5rem;
+}
+
+.contact-container{
+    max-width:800px;
+    width:90%;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    gap:3rem;
+    border-radius: 1rem;
+    padding:4rem;
+}
+
+.left-side{
+    width:50%;
+}
+
+.left-side > img{
+    width:100%;
+}
+
+.right-side{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    /* gap:4em; */
+}
+
+
+.contact-text{
+    font-size: 1.5rem;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sub-btn{
+    color:white;
+    background-color: #8fc9d6;
+    width: 100%;
+    margin-top:1rem;
+    align-self:center;
+}
+
+.socials{
+    position: absolute;
+    display: flex;
+    gap:1rem;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.socials > a{
+    color:white !important;
+}
+
+.contact-area{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:var(--greyed-out);
+  font-size: 0.9rem;
+  font-weight:400;
+  gap:.5rem;
+  margin-top:30px;
+}
+
+.contact-area > *{
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.contact-area > * :first-child{
+  color:#8fc9d6; 
+}
+
+
+
+
+@media screen and (max-width:900px) {
+    .contact-container{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap:3rem;
+        padding-top:1.5rem;
+    }
+
+    .right-side{
+        width:100%;
+    }
+    .left-side{
+        width:100%;
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.custom-field {
+    position: relative;
+    font-size: 14px;
+    border-top: 20px solid transparent;
+    margin-bottom: 5px;
+    display: inline-block;
+    --field-padding: 12px;
+  }
+  
+  .custom-field input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: var(--field-padding);
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+  }
+  .custom-field textarea {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: var(--field-padding);
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .custom-field .placeholder {
+    position: absolute;
+    left: var(--field-padding);
+    width: calc(100% - (var(--field-padding) * 2));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 22px;
+    line-height: 100%;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 
+      top 0.3s ease,
+      color 0.3s ease,
+      font-size 0.3s ease;
+  }
+  
+  .custom-field input.dirty + .placeholder,
+  .custom-field input:focus + .placeholder,
+  .custom-field input:not(:placeholder-shown) + .placeholder {
+    top: -10px;
+    font-size: 10px;
+    color: #222;
+  }
+  
+  .custom-field .error-message {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    font-size: 12px;
+    background: #d30909;
+    color: #fff;
+    height: 24px;
+  }
+  
+  .custom-field .error-message:empty {
+    opacity: 0;
+  }
+
+  .custom-field.one input {
+    background: none;
+    border: 2px solid #ddd;
+    border-radius:1rem;
+    transition: border-color 0.3s ease;
+  }
+  .custom-field.one textarea {
+    background: none;
+    border: 2px solid #ddd;
+    border-radius:1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .custom-field.one input + .placeholder {
+    left: 8px;
+    padding: 0 5px;
+  }
+  .custom-field.one textarea + .placeholder {
+    left: 8px;
+    padding: 0 5px;
+  }
+  
+  .custom-field.one input.dirty,
+  .custom-field.one input:not(:placeholder-shown),
+  .custom-field.one input:focus {
+    border-color: #8fc9d6;
+    transition-delay: 0.1s
+  }
+  .custom-field.one textarea.dirty,
+  /* .custom-field.one textarea:not(:placeholder-shown), */
+  .custom-field.one textarea:focus {
+    /* color: ; */
+    border-color: #8fc9d6;
+    transition-delay: 0.1s
+  }
+  
+  .custom-field.one input.dirty + .placeholder,
+  .custom-field.one input:not(:placeholder-shown) + .placeholder,
+  .custom-field.one input:focus + .placeholder {
+    top: 0;
+    font-size: 10px;
+    color: #8fc9d6;
+    /* color: #222; */
+    background: #fff;
+    width: auto
+  }
+  .custom-field.one textarea.dirty + .placeholder,
+  /* .custom-field.one textarea:not(:placeholder-shown) + .placeholder, */
+  .custom-field.one textarea:focus + .placeholder {
+    top: 0;
+    font-size: 10px;
+    color: #8fc9d6;
+    background: #fff;
+    width: auto;
+  }
